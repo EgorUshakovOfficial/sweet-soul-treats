@@ -1,0 +1,226 @@
+
+/* Variables*/
+:root{
+	--box-width: 100%;
+	--box-height: 550px;
+}
+
+/* Global */
+body{
+	font-family: sans-serif;
+	font-size: 1rem;
+	background: rgb(247, 121, 134); 
+	width: 100vw;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	font-size: 1.3rem;
+}
+
+a:hover{
+	opacity: 0.9;
+	color: gray;
+}
+
+i{
+	font-size: 2rem;
+}
+
+/* Header */
+header{
+	position: fixed;
+	width: 100%;
+	background: rgb(247, 121, 134, 0.9);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	top: 0;
+	left: 0;
+}
+
+.logo{
+	background: url('../uploads/logo.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 125px;
+	height: 80px;
+	border-radius: 25px;
+}
+
+.nav-bar{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Container */
+.container{
+	width: 80%;
+	margin: 95px auto;
+}
+
+/* About us section, product section, choose section, and contact section*/
+#about-section, 
+#product-section, 
+#choose-section, 
+#contact-section{
+	margin-top: 20px;
+	background: pink;
+	border: 10px solid lightgray;
+}
+
+#about-section h1, 
+#product-section h2, 
+#choose-section h2, 
+#contact-section h2{
+	font-weight: 100;
+	text-align: center;
+	font-size: 2rem;
+	color: gray;
+}
+
+#about-section p{
+	text-align: justify;
+	margin: 5px 5px;
+	font-size: 1.2rem;
+}
+
+.images{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.biscuit-flavours{
+	background: url('../uploads/biscuit-flavours.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 3px solid black;
+	width: var(--box-width);
+	height: var(--box-height);
+	border: 5px solid lightgray;
+	margin-top: 5px;
+}
+
+.pupsicle-flavours{
+	background: url('../uploads/pupsicle-flavours.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 3px solid black;
+	width: var(--box-width);
+	height: var(--box-height);
+	border: 2px solid lightgray;
+	margin-top: 5px;
+}
+
+.pricing{
+	background: url('../uploads/pricing.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:var(--box-width);
+	height: var(--box-height);
+	border: 2px solid lightgray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#choose-section, 
+#contact-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.choose{
+	background: url('../uploads/pick-up.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: var(--box-width); 
+	height: var(--box-height);
+	border: 2px solid lightgray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+.contact-us{
+	background: url('../uploads/contact-us.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: var(--box-width);
+	height: var(--box-height);
+	border: 2px solid lightgray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+/* Footer */
+footer{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.social-media{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 10px;
+}
+
+.company-name{
+	font-size: 1.1rem;
+	color: white;
+}
+
+/* Mobile responsiveness */
+@media(max-width: 615px){
+	
+	header{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid white;
+	}
+
+	.nav-bar{
+		width: 100%;
+		grid-template-columns: auto;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	.nav-bar a{
+		text-align: center;
+		border: 3px solid white;
+	}
+
+	.container{
+		width: inherit;
+	}
+
+	#about-section{
+		margin-top: 170px;
+	}
+
+	.pricing,
+	.choose,
+	.biscuit-flavours,
+	.pupsicle-flavours, 
+	.contact-us{
+		height: 325px;
+		
+	}
+
+
+}
+
+
+
+
